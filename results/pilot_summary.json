@@ -1,0 +1,61 @@
+{
+  "dataset": {
+    "name": "TheKernel01/140k-Real-and-Fake-Faces",
+    "split": "train (streamed)",
+    "real_images": 200,
+    "fake_images": 200,
+    "total_images": 400,
+    "face_detection": {
+      "primary": 384,
+      "fallback_profile": 3,
+      "fallback_center": 13
+    }
+  },
+  "features": {
+    "edge_features_count": 10,
+    "texture_features_count": 12,
+    "frequency_features_count": 8,
+    "landmark_face_zones_count": 24,
+    "landmark_status": "geometric_aligned_face_zones",
+    "perturbation_features_count": 48,
+    "total_features_count": 102
+  },
+  "models": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.6083333333333333,
+      "precision": 0.589041095890411,
+      "recall": 0.7166666666666667,
+      "f1": 0.6466165413533834,
+      "roc_auc": 0.6872222222222222,
+      "tn": 30,
+      "fp": 30,
+      "fn": 17,
+      "tp": 43
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.6083333333333333,
+      "precision": 0.6031746031746031,
+      "recall": 0.6333333333333333,
+      "f1": 0.6178861788617886,
+      "roc_auc": 0.6775,
+      "tn": 35,
+      "fp": 25,
+      "fn": 22,
+      "tp": 38
+    }
+  ],
+  "efficiency": {
+    "static_feature_time_ms": 37.94564247131348,
+    "perturbation_feature_time_ms": 186.83661937713623,
+    "total_feature_extraction_time_ms": 224.7822618484497,
+    "rf_inference_time_ms": 3.5780282020568848,
+    "lr_inference_time_ms": 0.09354925155639648,
+    "total_processing_time_rf_ms": 228.3602900505066,
+    "total_processing_time_lr_ms": 224.8758111000061,
+    "num_scalar_features": 102,
+    "rf_model_size_kb": 649.2236328125,
+    "lr_model_size_kb": 1.4892578125
+  }
+}

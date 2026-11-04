@@ -1,0 +1,147 @@
+{
+  "dataset_evaluated": {
+    "name": "TheKernel01/140k-Real-and-Fake-Faces (Pilot)",
+    "images_tested": 400,
+    "real": 200,
+    "fake": 200,
+    "test_split_size": 120
+  },
+  "feature_extraction_package": {
+    "num_features": 61,
+    "avg_latency_ms": 34.781707525253296
+  },
+  "comparison_table": [
+    {
+      "Framework": "Our 102-D Pilot Pipeline",
+      "Model": "Logistic Regression",
+      "Training Split": "280 Train / 120 Test",
+      "Feature Dimensions": 102,
+      "Feature Extraction Latency (ms)": 224.78,
+      "Accuracy": 0.6083333333333333,
+      "Precision": 0.589041095890411,
+      "Recall": 0.7166666666666667,
+      "F1": 0.6466165413533834,
+      "ROC-AUC": 0.6872222222222222
+    },
+    {
+      "Framework": "Our 102-D Pilot Pipeline",
+      "Model": "Random Forest",
+      "Training Split": "280 Train / 120 Test",
+      "Feature Dimensions": 102,
+      "Feature Extraction Latency (ms)": 224.78,
+      "Accuracy": 0.6083333333333333,
+      "Precision": 0.6031746031746031,
+      "Recall": 0.6333333333333333,
+      "F1": 0.6178861788617886,
+      "ROC-AUC": 0.6775
+    },
+    {
+      "Framework": "Our Static (A+B+C+D) Pipeline",
+      "Model": "Random Forest",
+      "Training Split": "280 Train / 120 Test",
+      "Feature Dimensions": 54,
+      "Feature Extraction Latency (ms)": 37.95,
+      "Accuracy": 0.6583,
+      "Precision": 0.6557,
+      "Recall": 0.6667,
+      "F1": 0.6612,
+      "ROC-AUC": 0.7261
+    },
+    {
+      "Framework": "Uploaded Package (Pre-trained on 4000)",
+      "Model": "Logistic Regression",
+      "Training Split": "4,000 External -> 120 Zero-Shot Test",
+      "Feature Dimensions": 61,
+      "Feature Extraction Latency (ms)": 34.781707525253296,
+      "Accuracy": 0.55,
+      "Precision": 0.5272727272727272,
+      "Recall": 0.9666666666666667,
+      "F1": 0.6823529411764706,
+      "ROC-AUC": 0.5063888888888889
+    },
+    {
+      "Framework": "Uploaded Package (Pre-trained on 4000)",
+      "Model": "Linear SVM",
+      "Training Split": "4,000 External -> 120 Zero-Shot Test",
+      "Feature Dimensions": 61,
+      "Feature Extraction Latency (ms)": 34.781707525253296,
+      "Accuracy": 0.525,
+      "Precision": 0.5128205128205128,
+      "Recall": 1.0,
+      "F1": 0.6779661016949152,
+      "ROC-AUC": 0.6233333333333333
+    },
+    {
+      "Framework": "Uploaded Package (Pre-trained on 4000)",
+      "Model": "HistGradientBoosting",
+      "Training Split": "4,000 External -> 120 Zero-Shot Test",
+      "Feature Dimensions": 61,
+      "Feature Extraction Latency (ms)": 34.781707525253296,
+      "Accuracy": 0.5166666666666667,
+      "Precision": 0.75,
+      "Recall": 0.05,
+      "F1": 0.09375,
+      "ROC-AUC": 0.6666666666666666
+    },
+    {
+      "Framework": "Uploaded Package (Pre-trained on 4000)",
+      "Model": "Random Forest",
+      "Training Split": "4,000 External -> 120 Zero-Shot Test",
+      "Feature Dimensions": 61,
+      "Feature Extraction Latency (ms)": 34.781707525253296,
+      "Accuracy": 0.5333333333333333,
+      "Precision": 0.8333333333333334,
+      "Recall": 0.08333333333333333,
+      "F1": 0.15151515151515152,
+      "ROC-AUC": 0.6552777777777778
+    },
+    {
+      "Framework": "Uploaded Package 61-D (Retrained)",
+      "Model": "Logistic Regression",
+      "Training Split": "280 Train / 120 Test",
+      "Feature Dimensions": 61,
+      "Feature Extraction Latency (ms)": 34.781707525253296,
+      "Accuracy": 0.6583333333333333,
+      "Precision": 0.6461538461538462,
+      "Recall": 0.7,
+      "F1": 0.672,
+      "ROC-AUC": 0.7091666666666667
+    },
+    {
+      "Framework": "Uploaded Package 61-D (Retrained)",
+      "Model": "Linear SVM",
+      "Training Split": "280 Train / 120 Test",
+      "Feature Dimensions": 61,
+      "Feature Extraction Latency (ms)": 34.781707525253296,
+      "Accuracy": 0.6833333333333333,
+      "Precision": 0.6666666666666666,
+      "Recall": 0.7333333333333333,
+      "F1": 0.6984126984126984,
+      "ROC-AUC": 0.7069444444444444
+    },
+    {
+      "Framework": "Uploaded Package 61-D (Retrained)",
+      "Model": "HistGradientBoosting",
+      "Training Split": "280 Train / 120 Test",
+      "Feature Dimensions": 61,
+      "Feature Extraction Latency (ms)": 34.781707525253296,
+      "Accuracy": 0.5916666666666667,
+      "Precision": 0.5901639344262295,
+      "Recall": 0.6,
+      "F1": 0.5950413223140496,
+      "ROC-AUC": 0.6491666666666666
+    },
+    {
+      "Framework": "Uploaded Package 61-D (Retrained)",
+      "Model": "Random Forest",
+      "Training Split": "280 Train / 120 Test",
+      "Feature Dimensions": 61,
+      "Feature Extraction Latency (ms)": 34.781707525253296,
+      "Accuracy": 0.6,
+      "Precision": 0.603448275862069,
+      "Recall": 0.5833333333333334,
+      "F1": 0.5932203389830508,
+      "ROC-AUC": 0.67125
+    }
+  ]
+}
